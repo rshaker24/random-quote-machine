@@ -49,9 +49,11 @@ function App() {
   return (
     <div
       className="background"
-      style={{ backgroundColor: "white", transition }}
     >
-      <div id="quote-box" style={{borderColor: randomColor, borderWidth: "4px", transition}}>
+      <div
+        id="quote-box"
+        style={{ borderColor: randomColor, borderWidth: "4px", transition }}
+      >
         <div
           className="quote-content"
           style={{ color: randomColor, transition }}
@@ -63,7 +65,13 @@ function App() {
           </h2>
           <h4 id="author"> - {quote.author}</h4>
         </div>
-        <div className="buttons" style={{fontFamily: "Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",}}>
+        <div
+          className="buttons"
+          style={{
+            fontFamily:
+              "Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
+          }}
+        >
           <a
             href={`https://twitter.com/intent/tweet?hasttags=quotes&related=freecodecamp&text=${quote.quote}`}
             id="tweet-quote"
@@ -74,13 +82,13 @@ function App() {
               transition,
             }}
           >
-            <FaTwitter color="white" style={{marginRight: "5px"}}/>
-              Tweet this Quote
+            <FaTwitter color="white" style={{ marginRight: "5px" }} />
+            Tweet this Quote
           </a>
           <button
             id="new-quote"
             onClick={changeQuote}
-            style={{ backgroundColor: randomColor, transition}}
+            style={{ backgroundColor: randomColor, transition }}
           >
             Generate Quote
           </button>
